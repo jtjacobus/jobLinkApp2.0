@@ -92,7 +92,7 @@ class Login(tk.Frame): #########################################################
         sql_user = 'SELECT User_ID FROM user WHERE UserName = "' + entry_username + '";'  # sets sql_user equal to User_ID for entry_username
         sql_assigned_jobs = 'SELECT * FROM assigned_jobs WHERE UserName ="' + entry_username + '";' #gets all data from assigned_jobs table
         sql_first = 'SELECT First_Name FROM user WHERE UserName ="' + entry_username + '";' #gets first name
-        conn = pymysql.connect(host='localhost', user='root', password='Lm19orange@22', db='josc')
+        conn = pymysql.connect(host='localhost', user='root', password='########', db='######')
         a = conn.cursor()
         a.execute(sql_user)
         user_data = a.fetchall()
@@ -179,7 +179,7 @@ class Login(tk.Frame): #########################################################
         tech_check = 'SELECT Tech_ID FROM technician WHERE User_ID = ' + str(found_user) + ';'
         admin_check = 'SELECT Admin_ID FROM admin WHERE User_ID = ' + str(found_user) + ';'
         client_check = 'SELECT Client_ID FROM client WHERE User_ID = ' + str(found_user) + ';'
-        conn = pymysql.connect(host='localhost', user='root', password='Lm19orange@22', db='josc')
+        conn = pymysql.connect(host='localhost', user='root', password='########', db='########')
         a = conn.cursor()
         a.execute(tech_check)
         utype_data = a.fetchall()
